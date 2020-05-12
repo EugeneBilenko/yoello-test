@@ -1,0 +1,49 @@
+@import "../../consts/variables.scss";
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: $headerHeight;
+  background-color: $redBase;
+
+  &__title {
+    padding: 12px 12px 17px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__nav-menu {
+    display: flex;
+    padding: 0 3px;
+
+    .MuiTabs-root,
+    .MuiTabs-flexContainer {
+      width: 100%;
+    }
+
+    .MuiTab-root {
+      width: 25%;
+      min-width: auto;
+      height: auto;
+      opacity: 1;
+      z-index: 2;
+
+      svg {
+        width: 30px;
+        height: auto;
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    .MuiTabs-indicator {
+      height: 48px;
+      background-color: $gray90;
+      border-radius: $borderRadius $borderRadius 0 0;
+      z-index: 1;
+    }
+  }
+}

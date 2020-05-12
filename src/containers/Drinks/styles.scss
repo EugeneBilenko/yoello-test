@@ -1,0 +1,54 @@
+@import "../../consts/variables.scss";
+
+.Drinks {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - #{$headerHeight});
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    overflow: auto;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      padding-bottom: 15px;
+      cursor: pointer;
+
+      &:nth-child(3n + 2) {
+        margin-left: 16px;
+        margin-right: 16px;
+      }
+
+      &__label {
+        height: 28px;
+        font-size: 12px;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      &__image {
+        display: flex;
+        width: 104px;
+        height: 104px;
+        padding: 10px;
+        margin-bottom: 4px;
+        border: 1px solid $gray80;
+        border-radius: $borderRadius;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  [class|="makeStyles-modal"] {
+    position: absolute!important;
+  }
+}

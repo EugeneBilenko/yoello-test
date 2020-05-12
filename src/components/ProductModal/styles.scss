@@ -1,0 +1,96 @@
+@import "../../consts/variables.scss";
+
+.product-modal {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+
+  &__overlay {
+    background-color: transparent!important;
+    backdrop-filter: blur(5px);
+  }
+
+  &__close-button,
+  &__content__add-button,
+  &__content {
+    border-radius: $borderRadius;
+  }
+
+  &__close-button,
+  &__content__add-button {
+    padding: 8px;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: $redBase;
+  }
+
+  &__close-button {
+    margin-bottom: 2px;
+    background-color: $redBase;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    color: $white;
+    background-color: $gray90;
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 8px;
+      color: $gray30;
+
+      &__detail,
+      &__image {
+        display: flex;
+      }
+
+      &__detail {
+        flex-direction: column;
+        width: 60%;
+        font-size: 13px;
+
+        * {
+          margin-bottom: 4px;
+        }
+
+        &__description,
+        &__food-pairing {
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+
+      &__image {
+        width: 90px;
+        height: 90px;
+        padding: 10px;
+        margin-bottom: 4px;
+        border-radius: $borderRadius;
+        background-color: $white;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &__add-button {
+      background-color: $white;
+      margin: auto;
+    }
+  }
+}
