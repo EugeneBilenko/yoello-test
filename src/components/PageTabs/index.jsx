@@ -9,14 +9,10 @@ import PageTabPanel from './PageTabPanel';
 const PageTabs = (props) => {
 	const [tabIndex, selectTabIndex] = useState(0);
 	const handleChangeIndex = (index) => {
-		console.log('index')
-		console.log(index)
 		selectTabIndex(index);
 		props.onDrinkFilterChange(DrinksTabs[index]);
 	};
 
-	console.log('drinks');
-	console.log(props.drinks.map(i => i.food_pairing));
 	return (
 		<div className="tabs-content">
 			<PageTabsNav
